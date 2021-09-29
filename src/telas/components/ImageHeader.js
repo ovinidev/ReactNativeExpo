@@ -6,10 +6,10 @@ import TextFonts from '../../components/TextFonts';
 
 const width = Dimensions.get('screen').width;
 
-export default function ImageHeader() {
+export default function ImageHeader({ titulo }) {
   return <>
     <Image source={top} style={styles.image} />
-    <TextFonts style={styles.titulo}>Detalhe da cesta</TextFonts>
+    <TextFonts style={styles.titulo}>{titulo}</TextFonts>
   </>
 }
 

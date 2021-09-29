@@ -1,22 +1,23 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import logo from '../../../assets/logo.png'
+
+import ButtonGreen from './button';
 
 import TextFonts from '../../components/TextFonts';
 
-export default function Header() {
+export default function Details({ nome, logo, titulo, descricao, preco, botao }) {
 
   return <>
-    <TextFonts style={styles.nome}>Cesta de verduras</TextFonts>
+    <TextFonts style={styles.nome}>{titulo}</TextFonts>
     <View style={styles.containerLogo}>
       <Image source={logo} style={styles.logo} />
-      <TextFonts style={styles.nomeFazenda}>Jenny Jack Farm</TextFonts>
+      <TextFonts style={styles.nomeFazenda}>{nome}</TextFonts>
     </View>
     <TextFonts style={styles.descricao}>
-      Uma cesta com produtos selecionados
-      cuidadosamente da fazenda direto para sua cozinha
+      {descricao}
     </TextFonts>
-    <TextFonts style={styles.preco}>R$ 40,00</TextFonts>
+    <TextFonts style={styles.preco}>{preco}</TextFonts>
+    <ButtonGreen>{botao}</ButtonGreen>
   </>
 }
 

@@ -2,14 +2,13 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native'
 
 import ImageHeader from './components/ImageHeader';
-import Header from './components/Header';
+import Details from './components/Details';
 
-
-export default function Cesta() {
+export default function Cesta({ topo, texts }) {
   return <>
-    <ImageHeader /> 
+    <ImageHeader {...topo} />
     <View style={styles.cesta}>
-      <Header />
+      <Details {...texts} />
     </View>
   </>
 }
