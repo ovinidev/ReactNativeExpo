@@ -2,9 +2,7 @@ import React from 'react';
 import { StatusBar, SafeAreaView, View } from 'react-native';
 
 import {useFonts, Inter_700Bold, Inter_400Regular} from '@expo-google-fonts/inter';
-
-import CestaImage from './src/telas/CestaImage';
-import CestaHeader from './src/telas/CestaHeader';
+import Cesta from './src/telas';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,8 +17,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <CestaImage /> 
-      <CestaHeader />
+      <Cesta />
     </SafeAreaView>
   );
 }

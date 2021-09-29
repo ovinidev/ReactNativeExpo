@@ -1,12 +1,12 @@
 import React from 'react';
-import { Image, StyleSheet, Dimensions, Text } from 'react-native'
+import { Image, StyleSheet, Dimensions } from 'react-native'
 
-import top from '../../assets/topo.png'
-import TextFonts from '../components/TextFonts';
+import top from '../../../assets/topo.png'
+import TextFonts from '../../components/TextFonts';
 
 const width = Dimensions.get('screen').width;
 
-export default function CestaImage() {
+export default function ImageHeader() {
   return <>
     <Image source={top} style={styles.image} />
     <TextFonts style={styles.titulo}>Detalhe da cesta</TextFonts>
