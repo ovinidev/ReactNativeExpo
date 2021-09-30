@@ -16,7 +16,7 @@ export const cesta = {
     titulo: "Cesta de verduras",
     descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
     preco: "R$ 45,00",
-    botao: "Comprar",
+    botao: "Exibir Itens",
   },
   itens: {
     titulo: "Itens da cesta",

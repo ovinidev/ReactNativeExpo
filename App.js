@@ -7,6 +7,9 @@ import Cesta from './src/telas';
 import AppLoading from 'expo-app-loading';
 
 import { cesta } from './src/mocks/cestas';
+import ListViewProvider from './src/context/ListViewContext';
+
+
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,10 +22,13 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <Cesta {...cesta} />
-    </SafeAreaView>
+    <ListViewProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar />
+        <Cesta {...cesta} />
+      </SafeAreaView>
+    </ListViewProvider>
+
   );
 }
 

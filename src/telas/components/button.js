@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { ListViewContext } from '../../context/ListViewContext';
 
 export default function ButtonGreen({ children }) {
-  const touch = () => {
-    alert("Oi");
-  }
+
+  const { toggleList } = useContext(ListViewContext);
 
   return (
-    <TouchableOpacity style={styles.button} onPress={touch}>
+    <TouchableOpacity style={styles.button} onPress={toggleList}>
       <Text style={styles.text}>{children}</Text>
     </TouchableOpacity>)
 }
@@ -16,7 +16,8 @@ export default function ButtonGreen({ children }) {
 const styles = StyleSheet.create({
   button: {
     marginTop: 14,
-    padding: 10,
+    alignItems: 'center',
+    padding: 14,
     borderRadius: 10,
     width: '100%',
     backgroundColor: "#2A9F85"
